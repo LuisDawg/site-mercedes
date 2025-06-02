@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.conteudo {
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.marca {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+main {
+    background-color: #000;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.galeria {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    flex-grow: 1;
+}
+
+
+.carro {
+    flex: 1;
+    min-width: 280px;
+    height: 400px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: flex-grow 0.5s ease;
+    z-index: 0;
+}
+
+.carro:hover {
+    flex-grow: 3;
+    z-index: 1;
+}
+
+.imagem {
+    width: 100%;
+    height: 50%;
+    transition: height 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.carro:hover .imagem {
+    height: 100%;
+}
+
+.carro1 .imagem {
+    background-image: url("carro1.PNG");
+}
+
+.carro2 .imagem {
+    background-image: url("carro2.jpg");
+}
+
+.carro3 .imagem {
+    background-image: url("carro3.PNG");
+}
+
+.descricao {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+.galeria a {
+    text-decoration: none;
+    color: inherit;
+}
+.quadro-carro {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.quadro-carro img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.botao-comprar {
+    padding: 12px 28px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.botao-comprar:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+    color: #aaa;
+}
+
+
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    border-top: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
